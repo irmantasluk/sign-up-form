@@ -1,0 +1,177 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: Norse-Bold;
+    src: url(./fonts/Norse-Bold.otf);
+}
+
+a {
+    text-decoration: none;
+}
+
+.show {
+    display: block !important;
+}
+
+.container {
+    display: flex;
+}
+
+@media screen  and (max-width: 768px){
+    .container {
+        flex-flow: column;
+    }
+}
+
+.col-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(./images/photo-1585202900225-6d3ac20a6962.avif);
+    background-size: cover;
+    height: 100vh;
+    flex-basis: 40%;
+    color: #fff;
+}
+
+.col-1 a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.col-2 {
+    flex-basis: 60%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-evenly; */
+}
+
+.logo-container {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 16px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 160px;
+    width: auto;
+}
+
+.logo span {
+    font-family: Norse-Bold, sans-serif;
+    font-size: 8rem;
+}
+
+.credits {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 16px;
+}
+
+.row {
+    height: calc(100vh / 3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.col-2 .row:nth-child(odd) {
+    background-color:#f1fff9;
+}
+
+.text, .form, .action-panel {
+    width: calc(90%);
+}
+
+.form form {
+    display: flex;
+}
+
+.form-col-1, .form-col-2 {
+    width: 40%;
+}
+
+.form-col-1 {
+    margin-right: 2rem;
+}
+
+.form-field {
+    margin-bottom: 24px;
+}
+
+.form label {
+    text-transform: uppercase;
+    font-size: 12px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form input {
+    appearance: none;
+    width: 80%;
+    font-size: 1.1  25rem;
+    padding: 8px;
+    margin-bottom: 5px;
+    border-radius: 6px;
+    outline: none;
+    border: 1px solid #a3ccca;
+    transition: 0.5s;
+}
+
+.form input:focus {
+    border: 1px solid #279465;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.form input::placeholder {
+    color: #a3ccca;
+}
+
+.val-msg {
+    color: red;
+    font-size: 14px;
+    display: block;
+}
+
+.invalid {
+    border: 1px solid red !important;
+}
+
+.action-panel {
+
+}
+
+.action-panel button {
+    background-color: #279465;
+    color: #f1fff9;
+    font-size: 1.25rem;
+    font-weight: 600;
+    outline: none;
+    border: 1px solid #279465;
+    border-radius: 6px;
+    padding: 16px 8px;
+    min-width: 200px;
+    transition: 0.25s;
+}
+
+button:hover, button:focus {
+    background-color: #1b6645;
+}
+
+.action-panel a {
+    color: #279465;
+    font-weight: 600;
+}
